@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-terminal" version="1.0">
+  <property name="dropdown-show-borders" type="bool" value="true"/>
+  <property name="font-use-system" type="bool" value="false"/>
+  <property name="dropdown-opacity" type="uint" value="95"/>
+  <property name="color-use-theme" type="bool" value="true"/>
+  <property name="dropdown-position-vertical" type="uint" value="15"/>
+  <property name="dropdown-width" type="uint" value="85"/>
+  <property name="dropdown-height" type="uint" value="65"/>
+  <property name="dropdown-animation-time" type="uint" value="0"/>
+  <property name="dropdown-move-to-active" type="bool" value="true"/>
+  <property name="font-name" type="string" value="JetBrains Mono Medium 12"/>
+  <property name="misc-menubar-default" type="bool" value="false"/>
+</channel>

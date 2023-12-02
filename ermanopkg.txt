@@ -1,0 +1,22 @@
+grub efibootmgr os-prober
+
+
+gvfs-smb openbsd-netcat iptables-nft ipset sof-firmware nss-mdns    
+
+dialog  mtools dosfstools inetutils dnsutils
+  
+bluetooth: bluez-utils bluez
+
+sound: pipewire pipewire-alsa pipewire-pulse pipewire-jack alsa-utils
+
+flatpak
+firewalld
+dnsmasq
+nfs-utils
+terminus-font
+
+networkmanager network-manager-applet wpa_supplicant gvfs ntfs-3g cups bash-completion openssh rsync reflector  xdg-user-dirs base-devel avahi xdg-utils tlp
+
+virt-manager qemu qemu-arch-extra edk2-ovmf  vde2
+
+tlp acpi acpid acpi_call
