@@ -13,10 +13,10 @@ sudo pacman -S --noconfirm --needed lightdm lightdm-gtk-greeter lightdm-gtk-gree
 # Desktop enviorment base apps
 sudo pacman -S --noconfirm --needed firefox qtile picom rofi alacritty xfce4-terminal vim geany thunar ranger mpv
 # Configuration and utilities
-sudo pacman -S --noconfirm --needed ristretto lxappearance nitrogen p7zip pavucontrol neofetch htop qalculate-gtk openssh 
+sudo pacman -S --noconfirm --needed ristretto lxappearance nitrogen p7zip pavucontrol neofetch htop qalculate-gtk openssh yt-dlp 
 
 # Other utilities
-sudo pacman -S --noconfirm --needed bash-completion xdg-user-dirs udiskie pacman-contrib numlockx xfce4-notifyd polkit polkit-gnome thunar-volman fuse gvfs gvfs-mtp cups rsync python-psutil yt-dlp alsa-utils
+sudo pacman -S --noconfirm --needed bash-completion xdg-user-dirs udiskie pacman-contrib numlockx xfce4-notifyd polkit polkit-gnome thunar-volman fuse gvfs gvfs-mtp cups rsync python-psutil alsa-utils
 # Themes and fonts
 sudo pacman -S --noconfirm arc-gtk-theme arc-icon-theme ttf-jetbrains-mono ttf-nerd-fonts-symbols
 
