@@ -317,7 +317,7 @@ wdg_cpuload = widget.CPU(
 	mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')}
 	)
 wdg_cputemp = widget.ThermalSensor(
-	tag_sensor = 'Tctl', # AMD
+	tag_sensor = 'Tctl', # AMD cpu
 	fmt = 'CPU: {}',
 	foreground = current_theme[5],
 	foreground_alert = current_theme[7],
@@ -325,7 +325,7 @@ wdg_cputemp = widget.ThermalSensor(
 	metric = True,
 	padding = 3,
 	threshold = 80,
-	update_interval = 3
+	update_interval = 5
 	)
 wdg_gputemp = widget.ThermalSensor(
 	tag_sensor = 'junction', # AMD
@@ -333,21 +333,21 @@ wdg_gputemp = widget.ThermalSensor(
 	foreground = current_theme[5],
 	foreground_alert = current_theme[7],
 	background = current_theme[2],
-	#metric = True,
+	metric = True,
 	padding = 3,
 	threshold = 80,
-	update_interval = 3
+	update_interval = 5
 	)
 wdg_ram = widget.Memory(
 	format = 'RAM:{MemUsed: .0f}{mm} [{MemPercent: .0f}%]',
-	update_interval = 3,
+	update_interval = 5,
 	padding = 3,
 	fontsize = 12,
 	foreground = current_theme[5],
 	background = current_theme[2],
 	mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' --hold -e top -o +%MEM')} # top -o +%MEM // free -h
 	)		    
-wdg_gpu = widget.GenPollText(
+wdg_gpu = widget.GenPollText( # nvidia
 	foreground = current_theme[5],
 	background = current_theme[2],
 	update_interval= 30, 
@@ -373,7 +373,7 @@ wdg_df = widget.DF(
 	padding = 3,
 	visible_on_warn = False,
 	partition= '/home',
-	format='󰜥 {uf}G [{r: .0f}%]', # 󰜥 󰿠 
+	format='󰜥 {uf}G [{r: .0f}%]', # 󰜥 󰿠 
 	update_interval=300,
 	mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' --hold -e df -h')}
 	)
@@ -637,6 +637,7 @@ def set_floating(window):
         window.floating = True
 
 floating_types = ["notification", "toolbar", "splash", "dialog"]
+floats_keep_above = True
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
