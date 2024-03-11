@@ -1,0 +1,14 @@
+lxapperance -> set theme
+nitrogen -> set wallpapers
+firefox 
+    set extensions
+    - ublockorigin
+    - res
+
+appimages
+    (create ~/Applications)
+    - joplin
+    - qbittorrent
+    - balena_etcher
+    - bitwarden
+    (.desktop files)  
