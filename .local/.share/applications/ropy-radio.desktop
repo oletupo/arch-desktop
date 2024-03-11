@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Radio Player
+Comment=Spanish radio stations
+Exec=/home/oletupo/.local/share/radio/radio.py
+#Exec=~/.local/share/radio/radio.py
+Terminal=false
+Type=Application
+Categories=Audio;Application;

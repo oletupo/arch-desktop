@@ -2,20 +2,18 @@
 
 # Prerequisites
 sudo pacman -Syyu --noconfirm --needed base base-devel linux-firmware linux amd-ucode reflector
-# Mirror list reflector
-sudo reflector -c Spain -a 12 --sort rate --save /etc/pacman.d/mirrorlist
 # Xorg
 sudo pacman -S --noconfirm --needed xorg xf86-video-fbdev xf86-video-amdgpu
-# wifi support
+# Wifi support
 sudo pacman -S --noconfirm --needed wpa_supplicant networkmanager network-manager-applet
 # Dm and greeter
 sudo pacman -S --noconfirm --needed lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 # Desktop enviorment base apps
 sudo pacman -S --noconfirm --needed firefox qtile picom rofi alacritty xfce4-terminal vim geany thunar ranger mpv
-# Configuration and utilities
-sudo pacman -S --noconfirm --needed ristretto lxappearance nitrogen p7zip pavucontrol neofetch htop qalculate-gtk openssh yt-dlp dex
+# Configuration and utils
+sudo pacman -S --noconfirm --needed ristretto lxappearance nitrogen p7zip pavucontrol neofetch htop qalculate-gtk openssh yt-dlp dex fzf
 
-# Other utilities
+# Other utils
 sudo pacman -S --noconfirm --needed bash-completion xdg-user-dirs udiskie pacman-contrib numlockx xfce4-notifyd polkit polkit-gnome thunar-volman fuse gvfs gvfs-mtp cups rsync python-psutil alsa-utils
 # Themes and fonts
 sudo pacman -S --noconfirm arc-gtk-theme arc-icon-theme ttf-jetbrains-mono ttf-nerd-fonts-symbols
@@ -37,6 +35,7 @@ xdg-user-dirs-update
 # Config files
 cp -Rf .config ~/
 cp -Rf wallpaper ~/Pictures
+cp -f .bashrc ~/
 
 # local/shared/applications .desktop
 # cp .local/share (scripts?)
