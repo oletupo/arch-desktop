@@ -54,7 +54,7 @@ textbox {
 }
 listview {
     fixed-height: 1;
-    lines: 3;
+    lines: 4;
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
