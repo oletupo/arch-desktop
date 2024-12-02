@@ -1,5 +1,6 @@
 from libqtile.lazy import lazy
 from libqtile.scratchpad import ScratchPad
+from libqtile.utils import send_notification
 
 import os
 import subprocess
@@ -13,10 +14,27 @@ def active_window_info(qtile):
     return
 
 '''
+Swap active groups between screens 
+'''
+@lazy.function
+def swap_groups_between_screens(qtile):
+    # Obtener las dos pantallas
+    screen0 = qtile.screens[0]
+    screen1 = qtile.screens[1]
+    
+    # Obtener el grupo activo en cada pantalla
+    group0 = screen0.group
+    group1 = screen1.group
+    
+    # Intercambiar los grupos entre las pantallas
+    screen0.set_group(group1)
+    screen1.set_group(group0)
+
+'''
 Switch focus to next screen avoiding picom crash if target screen is empty
 '''
 @lazy.screen.function
-def safe_switch_screen(screen):
+def safe_switch_screen_focus(screen):
     pass
 
 '''
@@ -30,7 +48,6 @@ y cambia el foco al grupo con qtile.groups_map[group.name].toscreen().
 def send_window_to_empty_group(qtile):
     # Obtener la ventana activa
     current_window = qtile.current_window
-    subprocess.Popen(['notify-send', str(current_window)])
     # Si no hay ventana activa, salir
     if not current_window:
         return
@@ -149,3 +166,13 @@ def tidygroups(qtile, follow_focus: bool = True, match_layout: bool = True) -> N
         win.group.cmd_toscreen()
         win.focus(False)
 
+@lazy.window.function
+def manual_save_configuration():
+    try:
+        home = os.path.expanduser('~')
+        # python3 ~/.config/qtile/config.py && qtile cmd-obj -o cmd -f validate_config
+        subprocess.Popen(['python3', '~/.config/qtile/config.py', '&&', 'qtile', 'cmd-obj', '-o', 'cmd', '-f', 'validate_config'])
+        subprocess.call([home + '/.config/qtile/scripts/qbackup.sh'])
+        send_notification("qtile", f"qtile configuration saved")
+    except:
+        pass

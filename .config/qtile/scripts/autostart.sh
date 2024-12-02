@@ -8,7 +8,7 @@ function run {
 }
 
 # xrandr 
-xrandr --output HDMI-A-0 --mode 2560x1440 --rate 144.0
+xrandr --output HDMI-A-0 --mode 2560x1440 --rate 60.0
 # vertical monitor setup
 xrandr --output HDMI-A-1 --rotate right
 
