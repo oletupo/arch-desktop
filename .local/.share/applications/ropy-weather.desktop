@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Weather
-Comment=Weekly weather predicition app
-Exec=/home/oletupo/Projects/rofi-scripts/aemet.py
-Terminal=false
-Type=Application
-Categories=Weather;Utils;

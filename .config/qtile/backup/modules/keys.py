@@ -2,7 +2,7 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 
 from .paths import home, myTerm, rofi_list_windows, rofi_drun, rofi_file_find, rofi_power_menu, obsidian, rofi_pkg_search
-from .lazyutils import go_to_empty_group, tidygroups, window_to_prev_group, send_window_to_empty_group, active_window_info
+from .lazyutils import go_to_empty_group, tidygroups, window_to_prev_group, send_window_to_empty_group, active_window_info, swap_groups_between_screens
 
 mod = "mod4" #  mod4 or mod = super key
 mod1 = "alt"
@@ -19,18 +19,21 @@ keys = [
     Key([mod], "w", lazy.window.toggle_floating()),
     Key([mod], "e", lazy.spawn('Thunar')), 
     Key([mod], "r", lazy.layout.flip()), # flip layout for monadtall/monadwide
+    Key([mod], "t", lazy.function(tidygroups)),
+
 
     Key([mod], "a", lazy.spawn(myTerm + ' -e ranger')), 
     Key([mod], "s", lazy.spawn(rofi_pkg_search)),
     Key([mod], "d", lazy.spawn(rofi_drun)),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
 
-    Key([mod], "t", lazy.function(tidygroups)),
-    Key([mod], "o", send_window_to_empty_group()),
-    Key([mod], "i", active_window_info()),
-    Key([mod], "n", go_to_empty_group()), # go to first empty group  
-    Key([mod], "p", window_to_prev_group()), #     
+    Key([mod], "z", go_to_empty_group()()),
+    Key([mod], "x", send_window_to_empty_group()),
+    Key([mod], "c", swap_groups_between_screens()),
 
+    Key([mod], "i", active_window_info()),
+    #Key([mod], "o", active_window_info()),     
+    #Key([mod], "p", window_to_prev_group()),  
 
     Key([mod], "period", lazy.screen.next_group(skip_empty=True)),
     Key([mod], "comma", lazy.screen.prev_group(skip_empty=True)), 

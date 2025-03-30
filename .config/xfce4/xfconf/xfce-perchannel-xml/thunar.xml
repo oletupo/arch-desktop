@@ -7,8 +7,8 @@
   <property name="last-window-height" type="int" value="1392"/>
   <property name="last-window-maximized" type="bool" value="true"/>
   <property name="last-show-hidden" type="bool" value="true"/>
-  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_25_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,147,148,50,90,50,50,693,50,50,72,50,145"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,146,151,50,90,50,50,687,50,50,70,50,137"/>
   <property name="last-separator-position" type="int" value="222"/>
   <property name="hidden-bookmarks" type="array">
     <value type="string" value="file:///home/oletupo/Desktop"/>
@@ -30,10 +30,11 @@
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
   <property name="misc-full-path-in-tab-title" type="bool" value="false"/>
   <property name="misc-show-delete-action" type="bool" value="false"/>
-  <property name="last-splitview-separator-position" type="int" value="1059"/>
+  <property name="last-splitview-separator-position" type="int" value="1074"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
   <property name="last-image-preview-visible" type="bool" value="true"/>
   <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
   <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
   <property name="misc-image-size-in-statusbar" type="bool" value="true"/>
+  <property name="last-menubar-visible" type="bool" value="true"/>
 </channel>

@@ -32,8 +32,10 @@ layouts = [
 floating_types = ["notification", "toolbar", "splash", "dialog"] # "rename"
 # Run the utility of `xprop` to see the wm class and name of an X client.
 # It can match by title, wm_class, role, wm_type, wm_instance_class, net_wm_pid, or wid.
+
 thunar_floating_rules = ['Error', 'Confirm to replace files', 'New Empty File...','Create New Folder']
 steam_floating_rules = ['Special Offers','Launching...']
+
 floating_layout = layout.Floating(float_rules=[
 	Match(wm_class = 'qalculate-gtk'),
     Match(wm_class = 'xfce4-terminal'),

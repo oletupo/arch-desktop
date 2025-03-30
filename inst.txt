@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check if the input file exists
+if [ ! -f "$1" ]; then
+  echo "Error: File '$1' not found!"
+  exit 1
+fi
+
+# Update the system before installing packages
+echo "Updating system..."
+sudo pacman -Syu --noconfirm
+
+# Install the packages listed in the input file
+while IFS= read -r package; do
+  # Ignore empty lines and comments
+  if [[ -z "$package" || "$package" =~ ^# ]]; then
+    continue
+  fi
+  echo "Installing package: $package"
+  sudo pacman -S --noconfirm "$package"
+done < "$1"
+
+echo "Package installation complete."
+
+
+# run with pkg file as argument
+# ./install_packages.sh packages.txt

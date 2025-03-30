@@ -25,7 +25,6 @@ from modules.hooks import start_once, start_always, set_floating, configuration_
 main = None
 dgroups_key_binder = None
 dgroups_app_rules = []
-#floating_types = ["notification", "toolbar", "splash", "dialog"] # "rename"
 floats_keep_above = True
 follow_mouse_focus = True
 bring_front_click = True

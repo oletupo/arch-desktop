@@ -1,0 +1,8 @@
+
+[ 11/19/2024 22:37:47.196 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x01000a09 (Firefox)
+[ 11/20/2024 11:07:46.413 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x08000009 (Qalculate!)
+[ 11/21/2024 01:02:35.394 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x07c00004 (Volume Control)
+[ 11/25/2024 13:41:16.671 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x04600004 (Exception)
+[ 11/30/2024 16:10:28.048 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x02a000df (notificationtoasts_2_desktop)
+[ 12/10/2024 10:51:35.928 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x01000b24 (Firefox)
+[ 12/13/2024 10:32:51.832 win_clear_flags WARN ] Flags 1 cleared on a destroyed window 0x05400001 (Error loading type Metadata/Items/Weapons/TwoHandWeapons/Bows/Bow6Held)

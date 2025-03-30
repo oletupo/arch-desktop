@@ -32,6 +32,10 @@ layouts = [
 floating_types = ["notification", "toolbar", "splash", "dialog"] # "rename"
 # Run the utility of `xprop` to see the wm class and name of an X client.
 # It can match by title, wm_class, role, wm_type, wm_instance_class, net_wm_pid, or wid.
+
+thunar_floating_rules = ['Error', 'Confirm to replace files', 'New Empty File...','Create New Folder']
+steam_floating_rules = ['Special Offers','Launching...']
+
 floating_layout = layout.Floating(float_rules=[
 	Match(wm_class = 'qalculate-gtk'),
     Match(wm_class = 'xfce4-terminal'),
@@ -41,11 +45,20 @@ floating_layout = layout.Floating(float_rules=[
     Match(title = 'Torrent Options'), # Transmission 
     Match(role = 'GtkFileChooserDialog'), # GTK Save Dialog 
     Match(role = 'PictureInPicture'), # Firefox detached video window 
-    Match(title = 'Picture in picture'), # Chrome detached video window 
+    Match(title = 'Picture in picture'), # Chrome detached video window
+
+    # Thunar floating rules (TODO: combine into one rule)
     MatchAll(Match(wm_class = 'Thunar'), Match(title = re.compile(r'\bRename.'))), # Thunar rename
-    MatchAll(Match(wm_class = 'Thunar'), Match(title = 'Error')), # Thunar rename
+    MatchAll(Match(wm_class = 'Thunar'), Match(title = 'Error')), # Thunar error
+    MatchAll(Match(wm_class = 'Thunar'), Match(title = 'Confirm to replace files')), # Thunar replace
+    MatchAll(Match(wm_class = 'Thunar'), Match(title = 'New Empty File...')), # Thunar new file
+    MatchAll(Match(wm_class = 'Thunar'), Match(title = 'Create New Folder')), # Thunar new folder
+    # Steam
+    MatchAll(Match(wm_class = 'steamwebhelper'), Match(title = 'Special Offers')), # Steam adds
+    MatchAll(Match(wm_class = 'steamwebhelper'), Match(title = 'Launching...')), # Steam launch
+    
     MatchAll(Match(wm_class = 'geany'), Match(title = 'Question')), # Geany
-    MatchAll(Match(wm_class = 'soffice'), Match(title = 'Save Document?')), # Libreoffice
+    MatchAll(Match(wm_class = 'soffice'), Match(title = 'Save Document?')), # Libreoffice save
+    MatchAll(Match(wm_class = 'qBittorrent'), Match(title = 'Remove torrent(s)')), # qBittorrent remove
     ], border_focus = current_theme[3])
 
-# code _NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_DIALOG

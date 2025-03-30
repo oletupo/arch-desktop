@@ -3,9 +3,11 @@
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
+	<submenu></submenu>
 	<unique-id>1618053380280548-1</unique-id>
 	<command>alacritty --working-directory %f</command>
-	<description>Example for a custom action</description>
+	<description>Terminal</description>
+	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>

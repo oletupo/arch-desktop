@@ -1,0 +1,93 @@
+# Package install list
+# Make sure there is no extra space after pkg name
+
+# Prerequisites
+base
+base-devel
+linux-firmware
+linux
+amd-ucode
+reflector
+
+# Xorg
+xorg
+xf86-video-fbdev
+xf86-video-amdgpu
+
+# Wayland
+wlroots
+pywlroots
+xorg-xwayland
+
+# Network
+wpa_supplicant
+networkmanager
+network-manager-applet
+
+# Display manager and greeter
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+
+# Desktop enviorment base apps
+firefox
+qtile
+picom
+rofi
+ghostty
+alacritty
+xfce4-terminal
+neovim
+geany
+thunar
+ranger
+dunst
+
+# Desktop enviorment extra apps
+ristretto
+mpv
+lxappearance
+nitrogen
+7zip
+pavucontrol
+btop
+qalculate-gtk
+openssh
+yt-dlp
+dex
+fzf
+libreoffice-still
+
+# Utils
+bash-completion
+xdg-user-dirs
+pacman-contrib
+
+# Thunar addons
+thunar-volman
+udiskie
+ntfs-3g
+numlockx
+polkit
+polkit-gnome
+fuse
+gvfs
+gvfs-mtp
+cups
+rsync
+alsa-utils
+
+# Python utils
+python-dbus-next
+python-uv
+python-psutil
+
+# Fonts and themes
+arc-gtk-theme
+arc-icon-theme
+ttf-jetbrains-mono
+ttf-nerd-fonts-symbols
+
+# AMD GPU
+vulkan-radeon
+lib32-vulkan-radeon

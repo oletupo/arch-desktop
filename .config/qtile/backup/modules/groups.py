@@ -44,5 +44,5 @@ for i in groups:
 
 # height width x and y are represented as a fraction of the current screen (0 min, 1 max)
 # match is needed because otherwise the window would dissapear instantly
-groups.append(ScratchPad("0",[DropDown("notes", obsidian, match=Match(wm_class = 'obsidian'), opacity=1, x=0.515, y=0.01, width=0.48, height=0.98, on_focus_lost_hide=False)]))
+groups.append(ScratchPad("0",[DropDown("notes", obsidian, match=Match(wm_class = 'obsidian'), opacity=1, x=0.504, y=0.005, width=0.494, height=0.987, on_focus_lost_hide=False)]))
 keys.append(Key([mod], 'm', lazy.group['0'].dropdown_toggle('notes')))
