@@ -22,7 +22,6 @@ def start_always():
 def set_floating(window):
     if (window.window.get_wm_transient_for() or window.window.get_wm_type() in floating_types):
         window.floating = True
-        
 '''
 Once startup is completed lauches backup script saving working config to qtile/backup folder
 '''

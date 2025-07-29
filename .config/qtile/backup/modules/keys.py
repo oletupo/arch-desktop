@@ -15,21 +15,22 @@ keys = [
     Key([], "Print", lazy.spawn('xfce4-screenshooter')),
 
 	# SUPER + KEYS
-    Key([mod], "q", lazy.window.kill()),
-    Key([mod], "w", lazy.window.toggle_floating()),
+    Key([mod], "w", lazy.window.kill()),
+    Key([mod], "q", lazy.window.toggle_floating()),
     Key([mod], "e", lazy.spawn('Thunar')), 
     Key([mod], "r", lazy.layout.flip()), # flip layout for monadtall/monadwide
-    Key([mod], "t", lazy.function(tidygroups)),
-
-
+    #Key([mod], "t", lazy.spawn('ghostty')), # used with that key but added as a scrathcpad
+     
     Key([mod], "a", lazy.spawn(myTerm + ' -e ranger')), 
     Key([mod], "s", lazy.spawn(rofi_pkg_search)),
     Key([mod], "d", lazy.spawn(rofi_drun)),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
 
+    # my lazy functions
     Key([mod], "z", go_to_empty_group()()),
     Key([mod], "x", send_window_to_empty_group()),
     Key([mod], "c", swap_groups_between_screens()),
+    Key([mod], "v", lazy.function(tidygroups)),
 
     Key([mod], "i", active_window_info()),
     #Key([mod], "o", active_window_info()),     

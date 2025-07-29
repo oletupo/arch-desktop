@@ -18,7 +18,7 @@ numlockx on &
 
 # starting utility applications at boot time
 run nm-applet &
-udiskie -2 &
+udiskie -t &
 picom -b --config $HOME/.config/picom/picom.conf 
 
 # polkit and notifications
@@ -27,4 +27,3 @@ dunst &
 
 # starting user applications at boot time
 nitrogen --restore &
-

@@ -29,10 +29,10 @@ rofi_power_menu = 'rofi  -show menu \
 
 # Appimages
 # problemas con cambio de version appimg
-notes_app = '~/Applications/Obsidian-1.5.8.AppImage' 
+#notes_app = '~/Applications/Obsidian-1.5.8.AppImage' 
 
 # Scripts called from .desktop files
-obsidian = f'dex {home}/.local/share/applications/obsidian-appimage.desktop'
+obsidian = f'dex {home}/.local/share/applications/appimage-obsidian.desktop'
 rofi_pkg_search = f'dex {home}/.local/share/applications/rofi-archweb.desktop'
 #kill_pid = f'dex {home}/.local/share/applications/ropy-kill.desktop'
 

@@ -5,7 +5,9 @@ from libqtile.utils import send_notification
 import os
 import subprocess
 # https://docs.qtile.org/en/latest/manual/config/lazy.html#examples
-
+'''
+Active window info
+'''
 @lazy.function
 def active_window_info(qtile):
     # Obtener la ventana activa
@@ -29,13 +31,6 @@ def swap_groups_between_screens(qtile):
     # Intercambiar los grupos entre las pantallas
     screen0.set_group(group1)
     screen1.set_group(group0)
-
-'''
-Switch focus to next screen avoiding picom crash if target screen is empty
-'''
-@lazy.screen.function
-def safe_switch_screen_focus(screen):
-    pass
 
 '''
 Send current window to empty group

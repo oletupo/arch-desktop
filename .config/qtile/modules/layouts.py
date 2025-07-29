@@ -6,7 +6,7 @@ from .colors import current_theme
 
 def init_layout_theme():
     return {
-		"margin":9,
+		"margin":1,
 		"border_width":4,
 		"border_focus": current_theme[3], # Unico uso
 		"border_normal": current_theme[9]
@@ -25,17 +25,15 @@ layouts = [
     #layout.Stack(num_stacks=2),
     #layout.Zoomy(),
     #layout.TreeTab(sections=['Tabs:'], panel_width=85, bg_color="#2F343F", fontsize=10, place_right=True),
-    #layout.Floating(margin=3, border_width=1, border_focus="#fba922", border_normal="#fba922"),
+    layout.Floating(margin=3, border_width=1, border_focus="#fba922", border_normal="#fba922"),
 ]
 
 # Floating windows rules
 floating_types = ["notification", "toolbar", "splash", "dialog"] # "rename"
 # Run the utility of `xprop` to see the wm class and name of an X client.
 # It can match by title, wm_class, role, wm_type, wm_instance_class, net_wm_pid, or wid.
-
 thunar_floating_rules = ['Error', 'Confirm to replace files', 'New Empty File...','Create New Folder']
 steam_floating_rules = ['Special Offers','Launching...']
-
 floating_layout = layout.Floating(float_rules=[
 	Match(wm_class = 'qalculate-gtk'),
     Match(wm_class = 'xfce4-terminal'),
